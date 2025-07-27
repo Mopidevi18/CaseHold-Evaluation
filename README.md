@@ -9,7 +9,7 @@
 
 ## 📌 Overview
 
-Legal professionals often spend significant time locating the exact *holding*—the single sentence that summarizes a court's decision—from cited legal cases. In this project, we use various NLP models to automate this process using the [CaseHOLD](https://huggingface.co/datasets/lex_glue) dataset.
+Legal professionals often spend significant time locating the exact *holding*—the single sentence that summarizes a court's decision—from cited legal cases. In this project, we use various NLP models to automate this process using the [CaseHOLD](https://huggingface.co/datasets/casehold/casehold) dataset.
 
 We benchmark the performance of 5 models on a multiple-choice classification task where each citing prompt is associated with five candidate holdings, and the goal is to identify the correct one.
 
