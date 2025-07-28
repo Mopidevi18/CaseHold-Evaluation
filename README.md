@@ -1,4 +1,4 @@
-# 🧠 Identifying the Case Holding from a Citing Prompt  
+#  Identifying the Case Holding from a Citing Prompt  
 ### A Comparative Study of Language Models for Legal Text Classification
 
 <p align="center">
@@ -7,7 +7,7 @@
   <img src="https://img.shields.io/badge/Dataset-CaseHOLD-orange?style=flat-square"/>
 </p>
 
-## 📌 Overview
+##  Overview
 
 Legal professionals often spend significant time locating the exact *holding*—the single sentence that summarizes a court's decision—from cited legal cases. In this project, we use various NLP models to automate this process using the [CaseHOLD](https://huggingface.co/datasets/casehold/casehold) dataset.
 
@@ -15,7 +15,7 @@ We benchmark the performance of 5 models on a multiple-choice classification tas
 
 ---
 
-## 🧾 Problem Statement
+##  Problem Statement
 
 > **Given:** A citing prompt + 5 candidate holdings  
 > **Goal:** Predict the correct holding (0 to 4)  
@@ -24,7 +24,7 @@ We benchmark the performance of 5 models on a multiple-choice classification tas
 
 ---
 
-## 📂 Dataset
+##  Dataset
 
 - **Source:** CaseHOLD dataset from Hugging Face
 - **Format:**  
@@ -38,7 +38,7 @@ We benchmark the performance of 5 models on a multiple-choice classification tas
 
 ---
 
-## 🏗️ Models Compared
+##  Models Compared
 
 | Model         | Type               | Pretraining         | Highlights                              |
 |---------------|--------------------|---------------------|------------------------------------------|
@@ -50,16 +50,16 @@ We benchmark the performance of 5 models on a multiple-choice classification tas
 
 ---
 
-## 🧪 Methodology
+##  Methodology
 
-### 🧼 Preprocessing
+###  Preprocessing
 - Tokenized using Hugging Face tokenizers
 - Max token length:
   - **512** for transformer models
   - **128** for LSTM model (with custom vocab of 20k tokens)
 - Multiple-choice format: 5 prompt+choice pairs per sample
 
-### ⚙️ Training Setup
+### Training Setup
 - **Optimizer:** Adam / AdamW
 - **Loss Function:** CrossEntropyLoss
 - **Epochs:** 10
@@ -69,7 +69,7 @@ We benchmark the performance of 5 models on a multiple-choice classification tas
 
 ---
 
-## 📊 Results
+## Results
 
 | Model         | Accuracy | Macro F1 | Weighted F1 |
 |---------------|----------|----------|-------------|
@@ -79,8 +79,8 @@ We benchmark the performance of 5 models on a multiple-choice classification tas
 | GPT-2         | 53.8     | 53.5     | 53.8         |
 | LSTM (custom) | 28.2     | 28.2     | 28.2         |
 
-> 🔍 **T5 performed best**, likely due to its generative design.  
-> 🧑‍⚖️ **LegalBERT** showed strong results due to legal-domain training.
+>  **T5 performed best**, likely due to its generative design.  
+>  **LegalBERT** showed strong results due to legal-domain training.
 
 ---
 
